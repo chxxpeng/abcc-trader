@@ -7,13 +7,13 @@ Original developer: [@yasinkuyu](https://twitter.com/yasinkuyu)
 
 ## Configuration
 
-1. [Signup](https://www.binance.com/?ref=10701111) for Binance
+1. [Signup](https://abcc.com/at_invitation/share?aff=0ec814) for Abcc.com
 1. Enable Two-factor Authentication
 1. Rename **config.sample.py** to `config.py` / **orders.sample.db** to `orders.db`
 1. Get an CSRF token and Secret cookie, insert into `config.py`
 
-        API key for account access
-        api_key = 'csrf meta key'
+        CSRF token for submit order
+        api_key = 'csrf meta value'
         Secret key for account access
         api_secret = '_abcc_session value'
 
