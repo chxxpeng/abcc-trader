@@ -1,6 +1,7 @@
-# Binance Trader (RC 2)
+# ABCC Trader (RC 2)
 
-This is an experimental bot for auto trading the binance.com exchange. [@yasinkuyu](https://twitter.com/yasinkuyu)
+This is an portable bot from binance api to abcc.wtf api for auto trading the abcc.com exchange. 
+Original developer: [@yasinkuyu](https://twitter.com/yasinkuyu)
 
 ![Screenshot](https://github.com/yasinkuyu/binance-trader/blob/master/img/screenshot.png)
 
