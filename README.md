@@ -1,4 +1,4 @@
-# ABCC Trader (RC 2)
+# ABCC Trader (BETA)
 
 This is an portable bot from binance api to abcc.wtf api for auto trading the abcc.com exchange. 
 Original developer: [@yasinkuyu](https://twitter.com/yasinkuyu)
