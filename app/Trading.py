@@ -61,15 +61,15 @@ class Trading():
     step_size = 0
 
     # Define static vars
-    WAIT_TIME_BUY_SELL = 1 # seconds
-    WAIT_TIME_CHECK_BUY_SELL = 0.2 # seconds
+    WAIT_TIME_BUY_SELL = 5 # seconds
+    WAIT_TIME_CHECK_BUY_SELL = 1 # seconds
     WAIT_TIME_CHECK_SELL = 5 # seconds
     WAIT_TIME_STOP_LOSS = 20 # seconds
 
     MAX_TRADE_SIZE = 7 # int
 
     # Type of commision, Default BNB_COMMISION
-    commision = BNB_COMMISION
+    commision = TOKEN_COMMISION
 
     def __init__(self, option):
         print("options: {0}".format(option))
@@ -116,10 +116,8 @@ class Trading():
 
 
     def buy(self, symbol, quantity, buyPrice, profitableSellingPrice):
-
         # Do you have an open order?
         self.check_order()
-
         try:
 
             # Create order

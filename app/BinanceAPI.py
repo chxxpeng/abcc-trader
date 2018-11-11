@@ -13,7 +13,7 @@ class BinanceAPI:
     
     BASE_URL = "http://api.abcc.wtf/api/v1"
     BASE_URL_V3 = "http://api.abcc.wtf/api/v3"
-    PUBLIC_URL = "http://api.abcc.wtf/api/product"
+    PUBLIC_URL = "http://api.abcc.wtf/api/v1/products"
 
     def __init__(self, key, secret):
         self.key = key
@@ -117,7 +117,7 @@ class BinanceAPI:
         params.update({"recvWindow": 120000})
         query = urlencode(self._sign(params))
         url = "%s?%s" % (path, query)
-        header = {"X-MBX-APIKEY": self.key}
+        header = {"X-ABCC-CSRF": self.key, "X-ABCC-SESSION": self.secret}
         return requests.get(url, headers=header, \
             timeout=30, verify=True).json()
 
@@ -125,7 +125,7 @@ class BinanceAPI:
         params.update({"recvWindow": 120000})
         query = urlencode(self._sign(params))
         url = "%s?%s" % (path, query)
-        header = {"X-MBX-APIKEY": self.key}
+        header = {"X-ABCC-CSRF": self.key, "X-ABCC-SESSION": self.secret}
         return requests.post(url, headers=header, \
             timeout=30, verify=True).json()
 
@@ -152,6 +152,6 @@ class BinanceAPI:
         params.update({"recvWindow": 120000})
         query = urlencode(self._sign(params))
         url = "%s?%s" % (path, query)
-        header = {"X-MBX-APIKEY": self.key}
+        header = {"X-ABCC-CSRF": self.key, "X-ABCC-SESSION": self.secret}
         return requests.delete(url, headers=header, \
             timeout=30, verify=True).json()

@@ -39,7 +39,7 @@ if __name__ == '__main__':
     parser.add_argument('--mode', type=str, help='Working Mode', default='profit')
     parser.add_argument('--buyprice', type=float, help='Buy Price (Price is greater than equal <=)', default=0)
     parser.add_argument('--sellprice', type=float, help='Sell Price (Price is less than equal >=)', default=0)
-    parser.add_argument('--commision', type=str, help='Type of commission, TOKEN/BNB (default BNB)', default='BNB')
+    parser.add_argument('--commision', type=str, help='Type of commission, TOKEN/BNB (default BNB)', default='TOKEN')
 
     option = parser.parse_args()
 
