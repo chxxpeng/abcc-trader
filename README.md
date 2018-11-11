@@ -9,19 +9,15 @@ Original developer: [@yasinkuyu](https://twitter.com/yasinkuyu)
 
 1. [Signup](https://www.binance.com/?ref=10701111) for Binance
 1. Enable Two-factor Authentication
-1. Go API Center, [Create New](https://www.binance.com/userCenter/createApi.html) Api Key
-
-        [✓] Read Info [✓] Enable Trading [X] Enable Withdrawals
-
 1. Rename **config.sample.py** to `config.py` / **orders.sample.db** to `orders.db`
-1. Get an API and Secret Key, insert into `config.py`
+1. Get an CSRF token and Secret cookie, insert into `config.py`
 
         API key for account access
-        api_key = ''
+        api_key = 'csrf meta key'
         Secret key for account access
-        api_secret = ''
+        api_secret = '_abcc_session value'
 
-        [API Docs](https://www.binance.com/restapipub.html)
+        [API Docs](http://api.abcc.wtf/api/doc/index.html)
 
 1. Optional: run as an excutable application in Docker containers
 
@@ -79,7 +75,7 @@ Original developer: [@yasinkuyu](https://twitter.com/yasinkuyu)
         XXXBNB  (Binance Coin)
         XXXUSDT (Tether)
 
-    All binance symbols are supported.
+    All abcc symbols are supported.
 
     Every coin can be different in --profit and --quantity.
     If quantity is empty --quantity is automatically calculated to the minimum qty.
